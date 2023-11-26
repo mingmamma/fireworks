@@ -1,0 +1,4 @@
+[debug] [fireworks-build-build] Classpath dependencies List()
+[debug] [fireworks-build-build] Dependencies from configurations List()
+[debug] Bloop wrote the configuration of project 'fireworks-build-build' to '/Users/mingma/fireworks/project/project/.bloop/fireworks-build-build.json'
+[success] Generated .bloop/fireworks-build-build.json
