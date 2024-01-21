@@ -11,6 +11,8 @@ import scala.util.Random
  * - [[Exploding]],
  * - [[Done]] (all the particles have burnt).
  */
+// Note a sealed trait is good choice if the subtypes to model are almost known
+// c.f. https://stackoverflow.com/questions/11203268/what-is-a-sealed-trait
 sealed trait Firework
 
 object Firework:
@@ -80,6 +82,9 @@ case class Waiting(countDown: Int, startPosition: Point, numberOfParticles: Int,
   def next: Firework =
     if countDown > 0 then
       //c.f. https://docs.scala-lang.org/scala3/book/domain-modeling-tools.html#case-classes
+      // the states as case classes which are supposed to be immutable data structure
+      // we utilize the utility method copy of case class which is useful to create modified
+      // copies of case case instances
       copy(countDown = countDown - 1)
     else Launched.init(startPosition, numberOfParticles, particlesColor)
 
@@ -99,7 +104,7 @@ object Waiting:
       (Random.nextInt(Settings.width / 2) - Settings.width / 4).toDouble,
       (-Settings.height / 2).toDouble
     )
-    // Random count-down between 0 and 60
+    // Random count-down between 0(inclusive) and 60(exclusive)
     val countDown = Random.nextInt(60)
     Waiting(countDown, position, numberOfParticles, color)
 
@@ -129,8 +134,11 @@ case class Launched(countDown: Int, position: Point, direction: Angle, numberOfP
    *         and use the constant [[Settings.propulsionSpeed]] for the speed of the firework.
    */
   def next: Firework =
-    if countDown > 0 then 
-      copy(countDown = countDown - 1, position = Motion.movePoint(position,direction,Settings.propulsionSpeed))
+    if countDown > 0 then
+      // At each step within the Launched state, the countDown decrements by 1 and the motion evolves
+      // Made use of the movePoint method in the Motion utility object to obtain the next Point position
+      // which simulates a linear constant velocity movement for the launch of the firework batch
+      copy(countDown = countDown - 1, position = Motion.movePoint(position,direction, Settings.propulsionSpeed))
     else Exploding.init(numberOfParticles, direction, position, particlesColor)
 
 end Launched
@@ -170,6 +178,9 @@ case class Exploding(countDown: Int, particles: Particles) extends Firework:
    */
   def next: Firework =
     if countDown > 0 then
+      // note that particles.next is a map of particles collection with the next op on each particle
+      // since the next state of particles is the collective states of each particle evolving to the 
+      // next state
       copy(countDown = countDown - 1, particles = particles.next)
     else Done
 
@@ -185,7 +196,10 @@ object Exploding:
    * @param color             color of the firework
    */
   def init(numberOfParticles: Int, direction: Angle, position: Point, color: Color): Exploding =
-    // Create a group of `numberOfParticles` random particles
+    // Create a List of `numberOfParticles` random particles with the List.fill() method
+    // https://www.scala-lang.org/api/current/scala/collection/immutable/List$.html#fill-3a1
+    // the init method in the Particle object provides the computation that returns a 
+    // randomised particle
     val particles = List.fill(numberOfParticles)(Particle.init(direction, position, color))
     Exploding(countDown = 30, Particles(particles))
 
@@ -197,7 +211,7 @@ end Exploding
 case object Done extends Firework
 
 /**
- * A single particle in a firework explosion
+ * A single (immutabble) particle instance in a firework explosion
  * @param horizontalSpeed horizontal component of the particle speed
  * @param verticalSpeed   vertical component of the particle speed
  * @param position        position of the particle
@@ -226,7 +240,7 @@ case class Particle(horizontalSpeed: Double, verticalSpeed: Double, position: Po
       Motion.drag(verticalSpeed-Settings.gravity)
     // Particle position is updated according to its new speed
     val updatedPosition = Point(position.x + updatedHorizontalSpeed, position.y + updatedVerticalSpeed)
-    // Construct a new particle with the updated position and speed
+    // Construct a new particle with the modified position and speed with copy() method for case class
     copy(horizontalSpeed = updatedHorizontalSpeed, verticalSpeed = updatedVerticalSpeed, position = updatedPosition)
 
 end Particle
@@ -268,8 +282,10 @@ end Particle
 object Motion:
 
   /**
+   * Note that the movePoint method simulates the linear constant velocity movement in 2D space
    * @return The next position of the given `point`, assuming that it moves towards the given
-   *         `direction` at the given `speed`
+   *         `direction` at the given `speed`, by computing the x and y coordinate respectively
+   *          by incrementing current coordinates with replacements 
    * @param point     current position of the point
    * @param direction direction of the point
    */

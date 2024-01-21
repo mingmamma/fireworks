@@ -228,3 +228,95 @@ WARNING: Unmatched cancel notification for request id 4163
 Nov. 26, 2023 6:37:13 PM scala.meta.internal.pc.CompilerAccess handleError
 SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/mingma/fireworks/.metals/.reports/metals-full/2023-11-26/r_compiler-error_(fireworks)_18-37-13-591.md
 2023.11.26 18:37:13 WARN  Could not find semantic tokens for: file:///Users/mingma/fireworks/src/main/scala/fireworks/FireworksRunner.scala
+2023.11.28 13:39:04 INFO  Shutting down server
+2023.11.28 13:39:04 INFO  shutting down Metals
+2023.11.28 13:39:04 INFO  Shut down connection with build server.
+2023.11.28 13:39:04 INFO  Shut down connection with build server.
+2023.11.28 13:39:04 INFO  Shut down connection with build server.
+2023.11.28 13:39:04 INFO  Exiting server
+2024.01.21 15:45:04 INFO  Started: Metals version 1.2.0 in folders '/Users/mingma/fireworks' for client Visual Studio Code 1.85.1.
+2024.01.21 15:45:07 INFO  Attempting to connect to the build server...
+2024.01.21 15:45:07 INFO  Bloop uses /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home defined at /Users/mingma/.bloop/bloop.json
+2024.01.21 15:45:07 INFO  skipping build import with status 'Installed'
+2024.01.21 15:45:08 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/fireworks/.metals/bsp.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.01.21 15:45:08 INFO  Attempting to connect to the build server...
+2024.01.21 15:45:08 INFO  Bloop uses /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home defined at /Users/mingma/.bloop/bloop.json
+2024.01.21 15:45:08 INFO  Attempting to connect to the build server...
+2024.01.21 15:45:08 INFO  Bloop uses /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home defined at /Users/mingma/.bloop/bloop.json
+2024.01.21 15:45:08 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/fireworks/project/project/.metals/bsp.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.01.21 15:45:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/mingma/fireworks/project/.metals/bsp.trace.json or /Users/mingma/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.01.21 15:45:09 INFO  time: Connected to build server in 1.93s
+2024.01.21 15:45:09 INFO  Connected to Build server: Bloop v1.5.13
+2024.01.21 15:45:09 INFO  time: Imported build in 0.21s
+2024.01.21 15:45:14 INFO  no build target found for /Users/mingma/fireworks/src/main/scala/fireworks/Fireworks.scala. Using presentation compiler with project's scala-library version: 3.3.1
+Jan. 21, 2024 3:45:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5
+2024.01.21 15:45:17 INFO  no build target found for /Users/mingma/fireworks/src/main/scala/fireworks/Fireworks.scala. Using presentation compiler with project's scala-library version: 3.3.0
+Jan. 21, 2024 3:45:17 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+Jan. 21, 2024 3:45:18 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+Jan. 21, 2024 3:45:18 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jan. 21, 2024 3:45:18 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2024.01.21 15:45:19 INFO  time: indexed workspace in 4.26s
+2024.01.21 15:45:20 INFO  compiling fireworks (2 scala sources)
+2024.01.21 15:45:28 INFO  compiling fireworks-test (2 scala sources)
+2024.01.21 15:45:28 INFO  time: compiled fireworks in 8.27s
+2024.01.21 15:45:32 INFO  time: compiled fireworks-test in 4.44s
+2024.01.21 16:03:11 INFO  compiling fireworks (1 scala source)
+2024.01.21 16:03:13 INFO  time: compiled fireworks in 1.73s
+2024.01.21 16:05:27 INFO  compiling fireworks (1 scala source)
+2024.01.21 16:05:27 INFO  time: compiled fireworks in 0.87s
+Jan. 21, 2024 4:07:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 989
+2024.01.21 16:18:27 INFO  compiling fireworks (1 scala source)
+2024.01.21 16:18:27 INFO  time: compiled fireworks in 0.64s
+2024.01.21 16:18:33 INFO  compiling fireworks (1 scala source)
+2024.01.21 16:18:33 INFO  time: compiled fireworks in 0.71s
+Jan. 21, 2024 4:19:11 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1768
+2024.01.21 16:19:27 INFO  compiling fireworks (1 scala source)
+2024.01.21 16:19:27 INFO  time: compiled fireworks in 0.62s
+Jan. 21, 2024 4:22:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2206
+2024.01.21 16:22:05 INFO  compiling fireworks (1 scala source)
+2024.01.21 16:22:05 INFO  time: compiled fireworks in 0.67s
+Jan. 21, 2024 4:30:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2252
+2024.01.21 16:30:53 INFO  compiling fireworks (1 scala source)
+2024.01.21 16:30:55 INFO  time: compiled fireworks in 1.5s
+2024.01.21 17:23:34 INFO  compiling fireworks (1 scala source)
+2024.01.21 17:23:36 INFO  time: compiled fireworks in 1.51s
+Jan. 21, 2024 5:27:10 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2692
+2024.01.21 17:27:10 INFO  compiling fireworks (1 scala source)
+2024.01.21 17:27:11 INFO  time: compiled fireworks in 1.41s
+Jan. 21, 2024 5:37:47 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/mingma/fireworks/.metals/.reports/metals-full/2024-01-21/r_compiler-error_(fireworks)_17-37-47-205.md
+2024.01.21 17:37:47 WARN  Could not find semantic tokens for: file:///Users/mingma/fireworks/src/main/scala/fireworks/FireworksRunner.scala
+Jan. 21, 2024 5:37:47 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/mingma/fireworks/.metals/.reports/metals-full/2024-01-21/r_compiler-error_(fireworks)_17-37-47-959.md
+2024.01.21 17:37:47 WARN  Could not find semantic tokens for: file:///Users/mingma/fireworks/src/main/scala/fireworks/FireworksRunner.scala
+Jan. 21, 2024 5:38:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2825
+Jan. 21, 2024 5:38:57 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/mingma/fireworks/.metals/.reports/metals-full/2024-01-21/r_compiler-error_(fireworks)_17-38-57-329.md
+2024.01.21 17:38:57 WARN  Could not find semantic tokens for: file:///Users/mingma/fireworks/src/main/scala/fireworks/FireworksRunner.scala
+Jan. 21, 2024 5:41:26 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2905
+Jan. 21, 2024 5:45:56 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/mingma/fireworks/.metals/.reports/metals-full/2024-01-21/r_compiler-error_(fireworks)_17-45-56-325.md
+2024.01.21 17:45:56 WARN  Could not find semantic tokens for: file:///Users/mingma/fireworks/src/main/scala/fireworks/FireworksRunner.scala
+Exception in thread "pool-6-thread-1" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:230)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2024.01.21 17:47:34 INFO  compiling fireworks (1 scala source)
+2024.01.21 17:47:35 INFO  time: compiled fireworks in 1.68s
+2024.01.21 17:48:40 INFO  compiling fireworks (1 scala source)
+2024.01.21 17:48:42 INFO  time: compiled fireworks in 1.98s
