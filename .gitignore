@@ -1,5 +1,5 @@
-# Ignore these folder recursively: **
-**/target
-**/.vscode
-**/.bloop
-**/.metals
+.DS_Store
+/target
+.vscode
+.bloop
+.metals
